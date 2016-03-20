@@ -1,13 +1,6 @@
-# Koa.js webapp boilerplate
+Exhibition is a Koa.js webapp that acts as a wrapper for third party APIs. You
+can add support for APIs through exhibits. I'm going to update the readme and
+the Wiki, soon. Until then, have a look at
+[github-exhibit](https://github.com/felixjung/github-exhibit) to get an idea how
+exhibits work.
 
-This is a template for writing Koa.js based webapps. It provides basic features
-such as
-
-* a pre-configured logger based on [Winston](https://github.com/winstonjs/winston),
-* a basic config module,
-* a gulp development workflow,
-* pre-configured middleware for error handling,
-* pre-configured caching with koa-cash,
-* linting with jscs and jshint and code analysis via TernJS.
-
-Happy building 🔨⛏🔧🏗
