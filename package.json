@@ -1,0 +1,36 @@
+{
+  "name": "exhibition",
+  "version": "1.0.0",
+  "description": "An easily extendable application for wrapping numerous APIs through exhibits.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "export NODE_ENV=development; nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/felixjung/exhibition"
+  },
+  "author": "Felix Jung <felix@jung.fm>",
+  "license": "MIT",
+  "homepage": "https://github.com/felixjung/exhibition",
+  "devDependencies": {
+    "koa-logger": "^1.3.0"
+  },
+  "engines": {
+    "node": ">=5.3.0"
+  },
+  "dependencies": {
+    "chalk": "^1.1.1",
+    "github-exhibit": "^1.0.0",
+    "koa": "^1.1.2",
+    "koa-cash": "^2.0.0",
+    "koa-router": "^5.3.0",
+    "lodash": "^4.5.1",
+    "moment": "^2.12.0",
+    "node-cache": "^3.2.0",
+    "prettyjson": "^1.1.3",
+    "winston": "^2.1.1",
+    "winston-syslog-posix": "^1.1.0"
+  }
+}

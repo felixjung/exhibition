@@ -1,0 +1,6 @@
+{
+	"preset": "airbnb",
+	"requireTrailingComma": null,
+	"requirePaddingNewLinesAfterBlocks": null,
+	"disallowQuotedKeysInObjects": null
+}
