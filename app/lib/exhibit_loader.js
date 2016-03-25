@@ -16,7 +16,13 @@ function addExhibitPrefix(exhibitPrefix, router) {
 
 function getExhibit(exhibitConfig) {
   const exhibitName = exhibitConfig.name;
-  const exhibitModule = require(exhibitName)(exhibitConfig);
+
+  try {
+    const exhibitModule = require(exhibitName)(exhibitConfig);
+  } catch (err) {
+    logger.error(`Unable to require exhibit ${ exhibitName }. Install it via npm first.`);
+    process.exit(1);
+  }
 
   const exhibitMiddlewares = _.map(exhibitModule.routers, router => {
     const configuredRouter = addExhibitPrefix(exhibitConfig.prefix, router);
