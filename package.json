@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "chalk": "^1.1.1",
-    "github-exhibit": "^1.0.0",
+    "exhibit-github": "^1.2.0-0",
     "koa": "^1.1.2",
     "koa-cash": "^2.0.0",
     "koa-router": "^5.3.0",
