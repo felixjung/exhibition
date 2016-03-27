@@ -20,7 +20,10 @@ function getExhibit(exhibitConfig) {
   try {
     const exhibitModule = require(exhibitName)(exhibitConfig);
   } catch (err) {
-    logger.error(`Unable to require exhibit ${ exhibitName }. Install it via npm first.`);
+    const defaultMessage = `Unable to require exhibit ${ exhibitName }.`;
+    const errorMsg = err.message || defaultMessage;
+
+    logger.error(errorMsg);
     process.exit(1);
   }
 
