@@ -32,17 +32,17 @@ function getExhibit(exhibitConfig) {
 
     return configuredRouter.routes();
   });
-  const contextKey = exhibitName.split('-')[0];
+  const contextKey = exhibitName.split('-')[1];
 
   return {
     contextKey,
-    middlewares: exhibitMiddlewares,
-    context: exhibitModule.context
+    context: exhibitModule.context,
+    middlewares: exhibitMiddlewares
   };
 }
 
 function registerExhibit(exhibit, app) {
-  logger.debug(`Registering exhibit ${exhibit.contextKey}`, exhibit);
+  logger.debug(`Registering exhibit ${ exhibit.contextKey }.`);
 
   _.set(app, `context.${ exhibit.contextKey }`, exhibit.context);
   _.forEach(exhibit.middlewares, middleware => app.use(middleware));
